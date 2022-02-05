@@ -81,12 +81,20 @@ public class JpaMain {
 //            System.out.println("=====flush======");
 
 //            ********준영속 상태********
-            Member member = em.find(Member.class, 150L);
-            member.setName("AAA");
-            em.detach(member);
-            //지금은 뭐 필요 없지만 웹에서 많이 쓴다.
+//            Member member = em.find(Member.class, 150L);
+//            member.setName("AAA");
+//            em.detach(member);
+//            //지금은 뭐 필요 없지만 웹에서 많이 쓴다.
 
 
+
+//            ******************* 여기서 부터는 진짜 DB 실습 *******************
+            Member member = new Member();
+            member.setName("viddasdsdㅁㄴㅇㄹㅁafi");
+            member.setRoleType(RoleType.ADMIN);
+            member.setAge(27);
+
+            em.persist(member);
             tx.commit();
         } catch (Exception e){
             tx.rollback();
