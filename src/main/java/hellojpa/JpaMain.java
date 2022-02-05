@@ -74,6 +74,19 @@ public class JpaMain {
 //            member.setName("testU2");
 //            em.detach(member);//하면 안바뀌지롱~
 
+//            flush!
+//            Member member = new Member(200L, "member200");
+//            em.persist(member);
+//            em.flush();
+//            System.out.println("=====flush======");
+
+//            ********준영속 상태********
+            Member member = em.find(Member.class, 150L);
+            member.setName("AAA");
+            em.detach(member);
+            //지금은 뭐 필요 없지만 웹에서 많이 쓴다.
+
+
             tx.commit();
         } catch (Exception e){
             tx.rollback();
