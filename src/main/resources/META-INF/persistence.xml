@@ -2,6 +2,7 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 
     <persistence-unit name="hello">
+        <class>hellojpa.Team</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
@@ -14,7 +15,7 @@
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
             <property name="hibernate.jdbc.batch_size" value="10"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
         </properties>
     </persistence-unit>
 </persistence>
