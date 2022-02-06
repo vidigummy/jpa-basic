@@ -91,18 +91,18 @@ public class JpaMain {
 //            ******************* 여기서 부터는 진짜 DB 실습(전의 Entity는 Back에 있다.) *******************
 //            1:N 맍들기
 //            Create
-            Team team = new Team();
-            team.setName("KAU");
-            em.persist(team);
-
-            Member member = new Member();
-            member.setName("vidigummy");
-            member.setTeam(team);
-            member.setAge(27);
-            em.persist(member);
-
-            em.flush();
-            em.clear();
+//            Team team = new Team();
+//            team.setName("KAU");
+//            em.persist(team);
+//
+//            Member member = new Member();
+//            member.setName("vidigummy");
+//            member.setTeam(team);
+//            member.setAge(27);
+//            em.persist(member);
+//
+//            em.flush();
+//            em.clear();
 
 
 //            Member findMember = em.find(Member.class, member.getId());
