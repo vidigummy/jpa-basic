@@ -4,6 +4,9 @@
     <persistence-unit name="hello">
         <class>hellojpa.Team</class>
         <class>hellojpa.Locker</class>
+        <class>hellojpa.Item</class>
+        <class>hellojpa.Album</class>
+        <class>hellojpa.Movie</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>

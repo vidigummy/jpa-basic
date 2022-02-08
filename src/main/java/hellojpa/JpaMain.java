@@ -121,7 +121,20 @@ public class JpaMain {
 //            findMember.setTeam(newTeam);
 //            System.out.println("---------findTeam = "+findteam.getName());
 
-            tx.commit();
+
+//            상속관계 넣기
+//            Movie movie = new Movie();
+//            movie.setActor("Vidigummy");
+//            movie.setDirector("Dengo");
+//            movie.setName("Code In The KAU");
+//            movie.setPrice(100);
+//            em.persist(movie);
+//            em.flush();
+//            em.clear();
+//
+//            Movie findMovie = em.find(Movie.class, movie.getId());
+//            System.out.println(findMovie.getDirector());
+//            tx.commit();
         } catch (Exception e){
             tx.rollback();
         }finally {
