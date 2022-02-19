@@ -4,6 +4,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 public class JpaMain {
@@ -135,7 +138,29 @@ public class JpaMain {
 //            Movie findMovie = em.find(Movie.class, movie.getId());
 //            System.out.println(findMovie.getDirector());
 //            tx.commit();
+
+//            프록시
+//            Member member = new Member();
+//            member.setName("vi");
+//            em.persist(member);
+//            em.flush();
+//            em.clear();
+//
+////            Member member1 = em.find(Member.class, member.getId());
+//            Member member1 = em.getReference(Member.class, member.getId());
+
+            //JPQL
+//            List<Member> result = em.createQuery("select m From Member as m where m.username like '%kim%'", Member.class).getResultList();
+            //criteria 사용
+//            CriteriaBuilder cb = em.getCriteriaBuilder();
+//            CriteriaQuery<Member> query = cb. createQuery(Member.class);
+//            Root<Member> m = query.from(Member.class);
+//            CriteriaQuery<Member> cq = query.select(m).where(cb.equal(m.get("username"), "kim"));
+//            List<Member> resultList = em.createQuery(cq).getResultList();
+
+            tx.commit();
         } catch (Exception e){
+
             tx.rollback();
         }finally {
             em.close();

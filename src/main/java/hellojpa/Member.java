@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Member {
+public class Member extends BaseEntity{
 
     @Id
     @GeneratedValue
@@ -16,15 +16,31 @@ public class Member {
     private String name;
     private int age;
 
-//    @Column(name = "TEAM_ID")
+//    public Locker getLocker() {
+//        return locker;
+//    }
+//
+//    public void setLocker(Locker locker) {
+//        this.locker = locker;
+//    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    //    @Column(name = "TEAM_ID")
 //    private Long teamId;
     @ManyToOne
     @JoinColumn(name = "TEAM_ID")
     private Team team;
 
-    @OneToOne
-    @JoinColumn(name = "locker_id")
-    private Locker locker;
+//    @OneToOne
+//    @JoinColumn(name = "locker_id")
+//    private Locker locker;
 
     @ManyToMany
     @JoinTable(name = "member_product")

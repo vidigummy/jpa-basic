@@ -7,6 +7,7 @@
         <class>hellojpa.Item</class>
         <class>hellojpa.Album</class>
         <class>hellojpa.Movie</class>
+        <class>hellojpa.BaseEntity</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
@@ -19,7 +20,7 @@
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
             <property name="hibernate.jdbc.batch_size" value="10"/>
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+<!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
         </properties>
     </persistence-unit>
 </persistence>
